@@ -1,0 +1,332 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans JP', "ヒラギノ角ゴ ProN W3", 'ヒラギノ角ゴ W3', "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+    background-color: #CCC;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+}
+
+.tittle {
+    font-size: 4rem;
+}
+
+/*-------------------------------------------
+    header
+-------------------------------------------*/
+.header {
+    width: 100%;
+}
+
+.header-display {
+    background-color: rgb(109, 108, 108);
+    margin-top: -36px;
+    height: 90vh;
+    padding: 180px 0;
+    font-size: 4.5em;
+    font-weight: bold;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-item {
+    width: 25%;
+}
+
+.nav-item a {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    border-right: 1px dotted #000;
+}
+
+/*About*/
+.about {
+    text-align: center;
+    padding: 80px 30px;
+}
+
+.about-text {
+    margin: 30px 0;
+}
+
+/*works*/
+.works {
+    height: 70vh;
+
+}
+
+.works-wrapper {
+    margin: 20px 40px;
+    height: 60vh;
+    overflow: scroll;
+    overflow-x: scroll;
+    display: flex;
+}
+
+.works-item {
+    width: 33%;
+}
+
+.works-item p {
+    width: 33%;
+}
+
+.works img {
+    width: 33%;
+}
+
+/*Skill*/
+.skill {
+    width: 100%;
+}
+
+.skill-container {
+    width: 100%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.skill-item {
+    margin: 15px 50px;
+}
+
+.skill-item:nth-child(4) {
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+/*Contact*/
+.contact {
+    width: 100%;
+}
+
+.contact-wrapper {
+    margin: 40px auto;
+}
+
+.form-item {
+    display: flex;
+    margin: 20px 50px;
+}
+
+dt {
+    width: 300px;
+}
+
+dd {
+    width: 500px;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+#Substance {
+    width: 400px;
+}
+
+textarea {
+    width: 400px;
+}
+
+dd input {
+    width: 400px;
+}
+
+/*footer*/
+.footer {
+    width: 100%;
+    background: rgb(109, 108, 108);
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 40px;
+    height: 35vh;
+}
+
+.footer-wrapper {
+    margin: 20 auto;
+    border: #000 1px solid;
+}
+
+.footer-nav {}
+
+.footer-nav ul li {
+    display: inline-block;
+    border-bottom: #000 1px solid;
+    margin: 30px 10px;
+}
+
+/*レスポンシブ*/
+.hidden {
+    display: none;
+}
+
+.header {
+    width: 100%;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+
+    /*header*/
+    .nav {
+        overflow: auto;
+        position: fixed;
+        flex-direction: column;
+        height: 100vh;
+        background-color: #fff;
+        width: 100%;
+        max-width: 70%;
+        top: 0;
+        left: 0;
+        box-shadow: 8px 0 40px #ccc;
+        z-index: 500;
+        transform: 0.5s;
+        transform: translateX(-105%);
+        opacity: 0.7;
+    }
+
+    .nav-item {
+        font-weight: bold;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .nav-item a {
+        border: none;
+        border-bottom: 1px dotted #000;
+    }
+
+    #nav-btn {
+        right: 50px;
+        top: 40px;
+        justify-content: space-between;
+        position: fixed;
+        width: 30px;
+        height: 22px;
+        display: block;
+    }
+
+    #nav-btn span,
+    #nav-btn span::before,
+    #nav-btn span::after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 25px;
+        background-color: #000;
+        border-radius: 3px;
+        display: block;
+    }
+
+    #nav-btn span::before {
+        bottom: -8px;
+    }
+
+    #nav-btn span::after {
+        bottom: -16px;
+    }
+
+    #nav-input:checked~.nav {
+        transform: translateX(0%);
+    }
+
+    .header-display {
+        height: 50vh;
+        padding: 90px 0;
+    }
+
+    /*Works*/
+    .works-item {
+        width: 50%;
+    }
+
+    .works-item p {
+        width: 50%;
+    }
+
+    .works img {
+        width: 50%;
+    }
+
+    /*Skill*/
+    .skill-container {
+        display: block;
+    }
+
+    .skill-item h3 {
+        text-align: center;
+    }
+
+    /*Contact*/
+    .contact {
+        width: 100%;
+    }
+
+    dt {
+        width: 200px;
+    }
+
+    dd {
+        width: 300px;
+    }
+
+    .form-submit {
+        text-align: center;
+    }
+
+    #Substance {
+        width: 200px;
+    }
+
+    textarea {
+        width: 200px;
+    }
+
+    dd input {
+        width: 200px;
+    }
+
+    .form-item {
+        display: block;
+    }
+
+    .form-item dt {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
