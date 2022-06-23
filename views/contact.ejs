@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>Masa Blog</title>
+    <%- include("./head"); %>
+</head>
+
+<body>
+    <%- include("./header"); %>
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact</h2>
+            <div class="contact-wrapper">
+                <form action="POST">
+                    <dl>
+                        <div class="form-item">
+                            <dt>Name</dt>
+                            <dd><input type="text" name="Name"></dd>
+                        </div>
+                        <div class="form-item">
+                            <dt>E-mail</dt>
+                            <dd><input type="text" name="E-mail"></dd>
+                        </div>
+                        <div class="form-item">
+                            <dt>Substance</dt>
+                            <dd>
+                                <select name="Substance" id="Substance">
+                                    <option value="仕事の依頼">仕事の依頼</option>
+                                    <option value="感想">このサイトの感想や修正点を教えてください</option>
+                                    <option value="その他">その他</option>
+                                </select>
+                            </dd>
+                        </div>
+                        <div class="form-item">
+                            <dt>Message</dt>
+                            <dd><textarea name="message" id="" cols="30" rows="10"></textarea></dd>
+                        </div>
+            </div>
+            </dl>
+            <div class="form-submit">
+                <input type="submit" name="submit" id="submit" value="submit">
+            </div>
+            </form>
+            </div>
+        </section>
+        <%- include("./footer"); %>
+</body>
+
+</html>

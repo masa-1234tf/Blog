@@ -5,15 +5,13 @@
   <%- include("./head"); %>
 </head>
 <body>
-<%- include("./header"); %>
+     <main>
+      <div class="error">
+        <h1>ERROR</h1>
+          <p><%= message %></p>
+     </div>
+    </main>
 
-<main>
-  <div class="error">
-    <h1>エラー</h1>
-    <p><%= message %></p>
-  </div>
-</main>
-
-<%- include("./footer"); %>
+    <%- include("./footer"); %>
 </body>
 </html>

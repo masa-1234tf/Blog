@@ -26,6 +26,7 @@
                     </div>
                     <% }) %>
             </div>
+            
             <div class="bottom">
                 <% if(session !==undefined){ %>
                     <a href="/blog/create" class="create-button">記事を書く</a>
@@ -33,9 +34,6 @@
                         <% if(session===undefined){ %>
                             <a href="/user/login" class="login-button">ログイン</a>
                             <% } %>
-                                <% if(session===undefined){ %>
-                                    <a href="/user/create" class="user-create-button">登録する</a>
-                                    <% } %>
             </div>
         </main>
         <%- include("./footer"); %>

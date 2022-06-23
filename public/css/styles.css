@@ -68,67 +68,6 @@ a {
     padding: 20px 0;
     border-right: 1px dotted #000;
 }
-
-/*About*/
-.about {
-    text-align: center;
-    padding: 80px 30px;
-}
-
-.about-text {
-    margin: 30px 0;
-}
-
-/*works*/
-.works {
-    height: 70vh;
-
-}
-
-.works-wrapper {
-    margin: 20px 40px;
-    height: 60vh;
-    overflow: scroll;
-    overflow-x: scroll;
-    display: flex;
-}
-
-.works-item {
-    width: 33%;
-}
-
-.works-item p {
-    width: 33%;
-}
-
-.works img {
-    width: 33%;
-}
-
-/*Skill*/
-.skill {
-    width: 100%;
-}
-
-.skill-container {
-    width: 100%;
-    margin: 20px auto;
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 33% 33% 33%;
-}
-
-.skill-item {
-    margin: 15px 50px;
-}
-
-.skill-item:nth-child(4) {
-    grid-row-start: 3;
-    grid-row-end: 3;
-    grid-column-start: 3;
-    grid-column-end: 4;
-}
-
 /*Contact*/
 .contact {
     width: 100%;
@@ -167,6 +106,7 @@ dd input {
     width: 400px;
 }
 
+
 /*footer*/
 .footer {
     width: 100%;
@@ -181,9 +121,6 @@ dd input {
     margin: 20 auto;
     border: #000 1px solid;
 }
-
-.footer-nav {}
-
 .footer-nav ul li {
     display: inline-block;
     border-bottom: #000 1px solid;
