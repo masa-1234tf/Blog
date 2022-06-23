@@ -8,7 +8,10 @@
 
 <body>
     <%- include("./header"); %>
-        <main>
+    <% if(session===undefined){ %>
+        <a href="/user/login" class="login-button">ログイン</a>
+    <% } %>
+        <main class="allBlog">
             <div class="grid-container">
                 <% allBlogs.forEach((blog)=> { %>
                     <div class="card">
@@ -30,10 +33,7 @@
             <div class="bottom">
                 <% if(session !==undefined){ %>
                     <a href="/blog/create" class="create-button">記事を書く</a>
-                    <% } %>
-                        <% if(session===undefined){ %>
-                            <a href="/user/login" class="login-button">ログイン</a>
-                            <% } %>
+                <% } %>
             </div>
         </main>
         <%- include("./footer"); %>
