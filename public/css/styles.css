@@ -35,6 +35,10 @@ a {
 .tittle {
     font-size: 4rem;
 }
+.bottom {
+    text-align: center;
+    margin-top: 4rem;
+}
 
 /*-------------------------------------------
     header
@@ -52,6 +56,16 @@ a {
     display: inline-block;
     font-size: 1.8rem;
 }
+.bottom {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.10);
+    border: none;
+    border-radius: 1.6rem;
+    color: white;
+    padding: 1.2rem 7.2rem;
+    display: inline-block;
+    font-size: 1.8rem;
+}
 
 .header-display {
     background: linear-gradient(135deg, #00baf2, rgba(73, 0, 199, 0.8));
@@ -60,6 +74,11 @@ a {
     padding: 180px 0;
     font-size: 4.5em;
     font-weight: bold;
+}
+.header-display p{
+    font-size: 24px;
+    text-align: center;
+    padding-top: 50px;
 }
 
 .nav {
@@ -78,6 +97,64 @@ a {
     text-align: center;
     padding: 20px 0;
     border-right: 1px dotted #000;
+}
+/*About*/
+.about {
+    text-align: center;
+    padding: 80px 30px;
+}
+
+.about-text {
+    margin: 30px 0;
+}
+/*works*/
+.works {
+    height: 70vh;
+
+}
+
+.works-wrapper {
+    margin: 20px 40px;
+    height: 60vh;
+    overflow: scroll;
+    overflow-x: scroll;
+    display: flex;
+}
+
+.works-item {
+    width: 33%;
+}
+
+.works-item p {
+    width: 33%;
+}
+
+.works img {
+    width: 33%;
+}
+
+/*Skill*/
+.skill {
+    width: 100%;
+}
+
+.skill-container {
+    width: 100%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.skill-item {
+    margin: 15px 50px;
+}
+
+.skill-item:nth-child(4) {
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
 }
 /*allblog*/
 .allBlog {
@@ -110,6 +187,59 @@ a {
 }
 
 
+/* blogRead */
+.blog-read {
+    background-color: #fff;
+    border-radius: 1.6rem;
+    box-shadow: rgba(30, 4, 4, 0.271) 0 0 1rem 0;
+}
+
+.blog-read>img {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.blog-read > h2 {
+    width: 100%;
+    background-color: rgb(60, 60, 60);
+    color: #fff;
+    padding: 1rem 1rem 1rem 1.5rem;
+}
+.blog-read p {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.update-button {
+    background: rgb(60, 60, 60);
+    border: none;
+    color: white;
+    padding: 1.2rem 7.2rem;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.delete-button {
+    background:rgb(60, 60, 60);
+    border: none;
+    color: white;
+    padding: 1.2rem 7.2rem;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+@media(max-width: 600px) {
+    .update-button {
+        display: block;
+        border-radius: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .delete-button {
+        display: block;
+        border-radius: 1.6rem;
+    }
+}
 /*Contact*/
 .contact {
     width: 100%;
