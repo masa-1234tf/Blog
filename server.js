@@ -24,7 +24,7 @@ mongoose.connect(process.env.MONGODB_URI)
     })
     .catch((error) => {
         console.error("Failure: Unconnected to MongoDB")
-    })
+})
 
 app.use(routers)
 
